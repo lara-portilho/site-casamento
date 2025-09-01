@@ -24,6 +24,9 @@ jobs:
           VITE_FIREBASE_STORAGEBUCKET: ${{ secrets.VITE_FIREBASE_STORAGEBUCKET }}
           VITE_FIREBASE_MESSAGINGSENDERID: ${{ secrets.VITE_FIREBASE_MESSAGINGSENDERID }}
           VITE_FIREBASE_APPID: ${{ secrets.VITE_FIREBASE_APPID }}
+          VITE_PIX_MERCHANTNAME: ${{ secrets.VITE_PIX_MERCHANTNAME }}
+          VITE_PIX_MERCHANTCITY: ${{ secrets.VITE_PIX_MERCHANTCITY }}
+          VITE_PIX_PIXKEY: ${{ secrets.VITE_PIX_PIXKEY }}
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
