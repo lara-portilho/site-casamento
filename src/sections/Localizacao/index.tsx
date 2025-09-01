@@ -1,6 +1,8 @@
 import { SectionTitle } from "@components/SectionTitle";
 import type { LatLngExpression } from "leaflet";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+import markerIconPng from "leaflet/dist/images/marker-icon.png";
+import { Icon } from "leaflet";
 
 export function Localizacao() {
   const coordenadas: LatLngExpression = [51.505, -0.09];
@@ -26,7 +28,16 @@ export function Localizacao() {
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-          <Marker position={coordenadas}>
+          <Marker
+            position={coordenadas}
+            icon={
+              new Icon({
+                iconUrl: markerIconPng,
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+              })
+            }
+          >
             <Popup>
               A pretty CSS3 popup. <br /> Easily customizable.
             </Popup>

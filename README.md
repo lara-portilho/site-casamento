@@ -6,3 +6,5 @@
 - [] Terminar seções
 - [] Adicionar flip na ao gerar um QRCode de PIX
 - [] Alterar ícone
+- [] Marker como png
+- [] Corrigir pix
