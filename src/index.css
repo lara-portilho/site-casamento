@@ -4,4 +4,10 @@
 @theme {
   --font-cursive: "Pinyon Script", cursive;
   --font-serif: "EB Garamond", serif;
+  --color-blush: #d19199;
+  --color-midnight: #11114e;
+}
+
+body {
+  font-family: "EB Garamond", serif;
 }

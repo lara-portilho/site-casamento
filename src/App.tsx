@@ -1,23 +1,23 @@
-import cn from "classnames";
-import { useWindowDimensions } from "./hooks/useWindowDimensions";
+import { ConfirmacaoPresenca } from "@sections/ConfirmacaoPresenca";
+import { DressCode } from "@sections/DressCode";
+import { Home } from "@sections/Home";
+import { ListaPresentes } from "@sections/ListaPresentes";
+import { Localizacao } from "@sections/Localizacao";
+import { Sobre } from "@sections/Sobre";
+import { ToastContainer } from "react-toastify";
 
 export function App() {
-  const { height, width } = useWindowDimensions();
-
   return (
-    <div
-      className={cn(
-        "relative h-screen w-screen bg-cover bg-center font-serif",
-        width > height + 50
-          ? "bg-[url(./assets/bg-web.jpg)]"
-          : "bg-[url(./assets/bg-mobile.jpg)]",
-      )}
-    >
-      <div className="absolute h-full w-full bg-black/50" />
-      <div className="absolute flex h-full w-full flex-col items-center justify-center text-white">
-        <h1 className="font-cursive text-6xl">Lara & Heitor</h1>
-        <p className="text-3xl">Em progresso</p>
+    <div className="bg-blush/10">
+      <Home />
+      <div className="mx-auto flex max-w-[1200px] flex-col gap-20 bg-white px-8 py-4 shadow-2xl">
+        <Sobre />
+        <Localizacao />
+        <ConfirmacaoPresenca />
+        <DressCode />
+        <ListaPresentes />
       </div>
+      <ToastContainer />
     </div>
   );
 }
