@@ -1,0 +1,15 @@
+export function Footer() {
+  return (
+    <p className="text-center text-sm text-gray-500">
+      Este site foi programado pela noiva! Caso queira mais informações sobre o
+      código,{" "}
+      <a
+        href="https://github.com/lara-portilho/site-casamento"
+        className="underline"
+      >
+        acesse aqui
+      </a>
+      .
+    </p>
+  );
+}

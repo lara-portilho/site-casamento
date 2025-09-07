@@ -1,28 +1,42 @@
+import { Section } from "@components/Section";
 import { SectionTitle } from "@components/SectionTitle";
 import type { LatLngExpression } from "leaflet";
-import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
-import markerIconPng from "leaflet/dist/images/marker-icon.png";
 import { Icon } from "leaflet";
+import markerIconPng from "leaflet/dist/images/marker-icon.png";
+import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 
 export function Localizacao() {
-  const coordenadas: LatLngExpression = [51.505, -0.09];
+  const coordenadas: LatLngExpression = [-16.7677597361215, -49.21735717377529];
 
   return (
-    <section id="localizacao" className="text-center">
+    <Section id="localizacao">
       <SectionTitle>Localização</SectionTitle>
-      <div className="flex-row-reverse items-center justify-center gap-5 md:flex">
+      <div className="flex-row-reverse items-center justify-center gap-10 md:mt-5 md:flex">
         <div>
-          <p>
-            A cerimônia ocorrerá na <b>Chácara N'Cantos</b>
+          <p className="text-xl font-bold">19 de setembro 2026, às 16h</p>
+          <p className="text-xl font-bold">Casarão Esmeralda</p>
+          <p className="my-5 md:max-w-64">
+            Alameda Pedro de Sá - Chácara São Pedro, Aparecida de Goiânia - GO,
+            74923-250
           </p>
-          <p>Endereço: lorem</p>
-          <p>Abrir no Google Maps</p>
+          <a
+            href="https://maps.app.goo.gl/j5Rf8Btj7EjQ6Jv16"
+            className="text-midnight underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Abrir no Google Maps
+          </a>
         </div>
         <MapContainer
           center={coordenadas}
-          zoom={13}
+          zoom={12}
           scrollWheelZoom={true}
-          style={{ minHeight: "18rem", width: "100%", maxWidth: "26rem" }}
+          style={{
+            minHeight: "18rem",
+            width: "100%",
+            maxWidth: "26rem",
+          }}
         >
           <TileLayer
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -39,11 +53,17 @@ export function Localizacao() {
             }
           >
             <Popup>
-              A pretty CSS3 popup. <br /> Easily customizable.
+              <div className="text-center">
+                <b>Casarão Esmeralda</b>
+                <br />
+                Alameda Pedro de Sá - Chácara São Pedro
+                <br />
+                Aparecida de Goiânia - GO, 74923-250
+              </div>
             </Popup>
           </Marker>
         </MapContainer>
       </div>
-    </section>
+    </Section>
   );
 }

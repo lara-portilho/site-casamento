@@ -1,12 +1,18 @@
+import { Section } from "@components/Section";
 import { SectionTitle } from "@components/SectionTitle";
 
 export function DressCode() {
   return (
-    <section id="dress-code" className="text-center">
+    <Section id="dress-code">
       <SectionTitle>Dress Code</SectionTitle>
       <p>
-        Por favor, confirme sua presença até dia <b>19 de agosto de 2026</b>
+        O traje solicitado é <b>Esporte Fino</b>.
       </p>
-    </section>
+      <p className="mt-5 font-bold text-red-500">Atenção mulheres:</p>
+      <p>
+        A cerimônia acontecerá em um gramado, para o seu conforto{" "}
+        <b>evite utilizar saltos finos</b>!
+      </p>
+    </Section>
   );
 }

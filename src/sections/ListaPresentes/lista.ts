@@ -1,4 +1,5 @@
 export type Presente = {
+  id: string;
   name: string;
   value: number;
   image: string;
@@ -6,83 +7,21 @@ export type Presente = {
 
 export const presentes: Presente[] = [
   {
-    name: "teste",
+    id: "1",
+    name: "teste1",
     value: 10,
     image: "https://placehold.co/600x400",
   },
   {
-    name: "teste",
-    value: 10,
+    id: "2",
+    name: "teste2",
+    value: 15,
     image: "https://placehold.co/600x400",
   },
   {
+    id: "3",
     name: "teste",
-    value: 10,
-    image: "https://placehold.co/600x400",
-  },
-  {
-    name: "teste",
-    value: 10,
-    image: "https://placehold.co/600x400",
-  },
-  {
-    name: "teste",
-    value: 10,
-    image: "https://placehold.co/600x400",
-  },
-  {
-    name: "teste",
-    value: 10,
-    image: "https://placehold.co/600x400",
-  },
-  {
-    name: "teste",
-    value: 10,
-    image: "https://placehold.co/600x400",
-  },
-  {
-    name: "teste",
-    value: 10,
-    image: "https://placehold.co/600x400",
-  },
-  {
-    name: "teste",
-    value: 10,
-    image: "https://placehold.co/600x400",
-  },
-  {
-    name: "teste",
-    value: 10,
-    image: "https://placehold.co/600x400",
-  },
-  {
-    name: "teste",
-    value: 10,
-    image: "https://placehold.co/600x400",
-  },
-  {
-    name: "teste",
-    value: 10,
-    image: "https://placehold.co/600x400",
-  },
-  {
-    name: "teste",
-    value: 10,
-    image: "https://placehold.co/600x400",
-  },
-  {
-    name: "teste",
-    value: 10,
-    image: "https://placehold.co/600x400",
-  },
-  {
-    name: "teste",
-    value: 10,
-    image: "https://placehold.co/600x400",
-  },
-  {
-    name: "teste",
-    value: 10,
-    image: "https://placehold.co/600x400",
+    value: 20,
+    image: "https://placehold.co/600x500",
   },
 ];
