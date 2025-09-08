@@ -27,7 +27,7 @@ export function App() {
       <Home />
       <div className="relative mx-auto max-w-[1200px] shadow-2xl">
         <Divider />
-        <div className="bg-off flex flex-col px-8 py-4">
+        <div className="bg-off flex flex-col py-4">
           <Header />
           <Agradecimentos />
           <Localizacao />

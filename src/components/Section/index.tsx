@@ -8,7 +8,10 @@ export function Section({
   ...props
 }: ComponentProps<"section">) {
   return (
-    <section {...props} className={cn("pt-18 pb-8 text-center", className)}>
+    <section
+      {...props}
+      className={cn("px-8 pt-18 pb-8 text-center", className)}
+    >
       <SectionDivider />
       {children}
     </section>

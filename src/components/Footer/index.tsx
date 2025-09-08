@@ -6,6 +6,8 @@ export function Footer() {
       <a
         href="https://github.com/lara-portilho/site-casamento"
         className="underline"
+        target="_blank"
+        rel="noopener noreferrer"
       >
         acesse aqui
       </a>

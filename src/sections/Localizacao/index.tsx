@@ -11,7 +11,7 @@ export function Localizacao() {
   return (
     <Section id="localizacao">
       <SectionTitle>Localização</SectionTitle>
-      <div className="flex-row-reverse items-center justify-center gap-10 md:mt-5 md:flex">
+      <div className="flex flex-col items-center justify-center gap-5 md:mt-5 md:flex-row-reverse md:gap-10">
         <div>
           <p className="text-xl font-bold">19 de setembro 2026, às 16h</p>
           <p className="text-xl font-bold">Casarão Esmeralda</p>
