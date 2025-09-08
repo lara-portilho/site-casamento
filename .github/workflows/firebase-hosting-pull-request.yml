@@ -16,6 +16,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version-file: .nvmrc
+      - name: Create .env file
+        run: |
+          echo "VITE_PIX_MERCHANTNAME=${{ secrets.VITE_PIX_MERCHANTNAME }}" >> .env
+          echo "VITE_PIX_MERCHANTCITY=${{ secrets.VITE_PIX_MERCHANTCITY }}" >> .env
+          echo "VITE_PIX_PIXKEY=${{ secrets.VITE_PIX_PIXKEY }}" >> .env
       - run: yarn && yarn build
         env:
           VITE_FIREBASE_APIKEY: ${{ secrets.VITE_FIREBASE_APIKEY }}
