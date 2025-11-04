@@ -15,9 +15,13 @@ export function Localizacao() {
         <div>
           <p className="text-xl font-bold">19 de setembro 2026, às 16h</p>
           <p className="text-xl font-bold">Casarão Esmeralda</p>
-          <p className="my-5 md:max-w-64">
+          <p className="mt-5 md:max-w-64">
             Alameda Pedro de Sá - Chácara São Pedro, Aparecida de Goiânia - GO,
             74923-250
+          </p>
+          <p className="mb-5 text-red-500 md:max-w-64">
+            Evite a Av. Sibipiruna, é a estrada de acesso às pedreiras da
+            região. Prefira o acesso pela Alameda Pedro de Sá.
           </p>
           <a
             href="https://maps.app.goo.gl/j5Rf8Btj7EjQ6Jv16"

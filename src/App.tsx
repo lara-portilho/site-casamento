@@ -10,6 +10,7 @@ import { ListaPresentes } from "@sections/ListaPresentes";
 import { Localizacao } from "@sections/Localizacao";
 import cn from "classnames";
 import { ToastContainer } from "react-toastify";
+import monogram from "./assets/monogram.png";
 
 export function App() {
   const { height, width } = useWindowDimensions();
@@ -29,6 +30,7 @@ export function App() {
         <Divider />
         <div className="bg-off flex flex-col py-4">
           <Header />
+          <img src={monogram} className="mx-auto my-5 w-60" />
           <Agradecimentos />
           <Localizacao />
           <DressCode />

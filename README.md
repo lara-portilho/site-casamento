@@ -33,7 +33,9 @@ Exclusive front-end project, no backend necessary. Depoyed on Firebase.
 
 - [] Terminar seções
 - [] Terminar lista de presentes
-- [] Alterar favicon do site
+- [] Detalhar dress code
+- [] Adicionar confirmação de presença
+- [X] Alterar favicon do site
 - [X] Adicionar local correto
 - [X] Adicionar flip na imagem ao gerar um QRCode de PIX
 - [X] Corrigir não renderização do Marker no mapa
