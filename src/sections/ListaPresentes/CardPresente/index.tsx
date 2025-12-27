@@ -38,7 +38,7 @@ export function CardPresente(presente: Presente) {
   }
 
   return (
-    <div className="flex h-72 w-52 shrink-0 flex-col items-center justify-center rounded-lg bg-white shadow-lg">
+    <div className="flex w-56 shrink-0 flex-col items-center justify-between rounded-lg bg-white px-2 py-3 shadow-lg">
       <div className="perspective relative size-44">
         <div
           className={cn(
@@ -62,15 +62,17 @@ export function CardPresente(presente: Presente) {
           </div>
         </div>
       </div>
-      <span>{presente.name}</span>
-      <span>R$ {presente.value.toFixed(2).replace(".", ",")}</span>
-      {!pixCode ? (
-        <Button onClick={getPix}>Comprar com PIX</Button>
-      ) : (
-        <Button onClick={copyToClipboard} variant="outline">
-          Copiar código
-        </Button>
-      )}
+      <span className="font-bold">{presente.name}</span>
+      <div className="flex flex-col">
+        <span>R$ {presente.value.toFixed(2).replace(".", ",")}</span>
+        {!pixCode ? (
+          <Button onClick={getPix}>Comprar com PIX</Button>
+        ) : (
+          <Button onClick={copyToClipboard} variant="outline">
+            Copiar código
+          </Button>
+        )}
+      </div>
     </div>
   );
 }
