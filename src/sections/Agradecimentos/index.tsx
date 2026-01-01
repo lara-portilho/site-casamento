@@ -3,7 +3,7 @@ import { SectionTitle } from "@components/SectionTitle";
 
 export function Agradecimentos() {
   return (
-    <Section id="agradecimentos" className="-mt-15">
+    <Section id="agradecimentos">
       <SectionTitle>Agradecimentos</SectionTitle>
       <div className="mx-auto flex flex-col gap-5 md:max-w-8/10">
         <b>Queridos familiares e amigos,</b>

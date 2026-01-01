@@ -1,6 +1,6 @@
 export function Footer() {
   return (
-    <p className="text-center text-sm text-gray-500">
+    <p className="px-8 text-center text-sm text-gray-500">
       Este site foi programado pela noiva! Caso queira mais informações sobre o
       código,{" "}
       <a

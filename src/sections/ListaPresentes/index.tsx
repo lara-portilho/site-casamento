@@ -1,3 +1,4 @@
+import { Button } from "@components/Button";
 import { Section } from "@components/Section";
 import { SectionTitle } from "@components/SectionTitle";
 import { useMemo, useState } from "react";
@@ -7,14 +8,16 @@ import { CardPresente } from "./CardPresente";
 import { presentes } from "./lista";
 
 type SortType = "asc" | "desc";
+export type CategoryType = "luaMel" | "meme";
 
 export function ListaPresentes() {
   const [sort, setSort] = useState<SortType>("asc");
+  const [category, setCategory] = useState<CategoryType>("luaMel");
   const sortedPresentes = useMemo(() => {
-    return [...presentes].sort((a, b) =>
-      sort === "asc" ? a.value - b.value : b.value - a.value,
-    );
-  }, [sort]);
+    return presentes
+      .filter((p) => p.category === category)
+      .sort((a, b) => (sort === "asc" ? a.value - b.value : b.value - a.value));
+  }, [sort, category]);
 
   return (
     <Section id="lista-presentes">
@@ -23,7 +26,22 @@ export function ListaPresentes() {
         A sua presença é nosso maior presente! Mas caso queira nos presentear,
         temos aqui algumas sugestões:
       </p>
-
+      <div className="mt-2 flex flex-col justify-center gap-2 md:flex-row">
+        <Button
+          variant={category === "luaMel" ? "blue" : "outline"}
+          size="lg"
+          onClick={() => setCategory("luaMel")}
+        >
+          Operação Lua de Mel
+        </Button>
+        <Button
+          variant={category === "meme" ? "blue" : "outline"}
+          size="lg"
+          onClick={() => setCategory("meme")}
+        >
+          Presentes Engraçados
+        </Button>
+      </div>
       <div className="text-midnight mt-2 flex items-center justify-center gap-2">
         Ordenar por:
         <select
@@ -40,7 +58,7 @@ export function ListaPresentes() {
         ))}
       </div>
       <p>Se preferir, também temos listas de presente nas seguintes lojas:</p>
-      <div className="mt-5 flex flex-col items-center justify-center gap-3 md:flex-row md:gap-10">
+      <div className="mt-5 flex flex-col items-center justify-center gap-5 md:flex-row md:gap-10">
         <a
           className="w-48"
           href="https://www.finalfeliz.de/laraeheitor"
