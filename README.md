@@ -1,69 +1,44 @@
-# React + TypeScript + Vite
+# Meu site de casamento
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto é meu site de casamento. A sua criação foi motivada pelo meu orgulho como desenvolvedora front-end e devido as altas taxas ao receber presentes em plataformas de criação de sites de casamento tradicionais. O casamento ocorrerá dia 19 de setembro de 2026. Esse site é uma aplicação singe page, com seções de agradecimentos, localização, dress code, confimação de presença (utilizando uma plataforma externa providenciada pela minha cerimonialista), e lista de presentes, que utiliza PIX para receber diretamente o valor do presente escolhido.
 
-Currently, two official plugins are available:
+## Stack utilizada
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Projeto exclusivo em front-end, não havendo necessidade de backend. Deploy feito no Firebase.
 
-## Expanding the ESLint configuration
+**Linguagem:** Typescript
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+**Base:** Vite + React
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+**Bibliotecas:** TailwindCSS, React Icons, Toastify, Leaflet, Pix Utils
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+# My wedding website
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+This project is my own wedding website. Its creation was motivated by my pride as a front-end web developer and due to the high fees for receiving gifts on traditional wedding website creation platforms. The wedding will take place on September 19, 2026. This website is a single page application, with acknowledgements, location, dress code, RSVP (using an external platform provided by my wedding planner), and a gift registry, which uses PIX (brazilian payment method) to directly receive the monetary value of the chosen gift.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Utilized stack
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Exclusive front-end project, no backend necessary. Depoyed on Firebase.
+
+**Linguagem:** Typescript
+
+**Base:** Vite + React
+
+**Bibliotecas:** TailwindCSS, React Icons, Toastify, Leaflet, Pix Utils
+
+
+### To-do
+
+- [] Terminar seções
+- [] Terminar lista de presentes
+- [] Detalhar dress code
+- [] Adicionar confirmação de presença
+- [X] Alterar favicon do site
+- [X] Adicionar local correto
+- [X] Adicionar flip na imagem ao gerar um QRCode de PIX
+- [X] Corrigir não renderização do Marker no mapa
+- [X] Corrigir PIX não identificando (problema GH Actions e .env)
+- [X] Adicionar setinha avisando que há mais conteúdo embaixo
+- [X] Adicionar select-none para os títulos
