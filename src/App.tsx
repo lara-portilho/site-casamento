@@ -16,14 +16,15 @@ export function App() {
   const { height, width } = useWindowDimensions();
 
   return (
-    <div
-      className={cn(
-        "relative bg-cover bg-fixed bg-center",
-        width > height + 50
-          ? "bg-[url(./assets/bg-web.jpg)]"
-          : "bg-[url(./assets/bg-mobile.jpg)]",
-      )}
-    >
+    <div className="relative">
+      <div
+        className={cn(
+          "fixed inset-0 -z-10 bg-cover bg-center",
+          width > height + 50
+            ? "bg-[url(./assets/bg-web.jpg)]"
+            : "bg-[url(./assets/bg-mobile.jpg)]",
+        )}
+      />
       <div className="fixed size-full bg-black/40" />
       <Home />
       <div className="relative mx-auto max-w-[1200px] shadow-2xl">
