@@ -31,10 +31,9 @@ Exclusive front-end project, no backend necessary. Depoyed on Firebase.
 
 ### To-do
 
-- [] Terminar seções
-- [] Terminar lista de presentes
-- [] Detalhar dress code
-- [] Adicionar confirmação de presença
+- [X] Terminar seções
+- [X] Terminar lista de presentes
+- [X] Adicionar confirmação de presença
 - [X] Alterar favicon do site
 - [X] Adicionar local correto
 - [X] Adicionar flip na imagem ao gerar um QRCode de PIX
