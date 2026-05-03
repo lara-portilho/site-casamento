@@ -46,7 +46,7 @@ export function ListaPresentes() {
         Ordenar por:
         <select
           onChange={(e) => setSort(e.currentTarget.value as SortType)}
-          className="border-midnight shrink-0 border-b px-1 py-1 font-bold outline-none"
+          className="border-midnight shrink-0 border-b p-1 font-bold outline-none"
         >
           <option value="asc">Mais baratos primeiro</option>
           <option value="desc">Mais caros primeiro</option>

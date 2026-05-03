@@ -17,23 +17,25 @@
     "moduleDetection": "force",
     "noEmit": true,
     "jsx": "react-jsx",
-    "baseUrl": "./",
     "paths": {
       "@assets/*": [
-        "src/assets/*"
+        "./src/assets/*"
       ],
       "@components/*": [
-        "src/components/*"
+        "./src/components/*"
       ],
       "@hooks/*": [
-        "src/hooks/*"
+        "./src/hooks/*"
       ],
       "@sections/*": [
-        "src/sections/*"
+        "./src/sections/*"
       ],
       "@utils/*": [
-        "src/utils/*"
+        "./src/utils/*"
       ],
+      "@app/*": [
+        "./src/*"
+      ]
     },
     /* Linting */
     "strict": true,
